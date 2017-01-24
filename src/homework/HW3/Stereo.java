@@ -29,23 +29,27 @@ class Stereo
 	
 	/* Methods */
 	
+	// Increases the volume if it's less than the maximum volume
 	void IncreaseVolume()
 	{
 		if(curVolume < maxVolume)
 			curVolume++;
 	}
 	
+	// Decreases the volume if it's less than the min volume
 	void DecreaseVolume()
 	{
 		if(curVolume > 0)
 			curVolume--;
 	}
 	
+	// Returns the brand of the stereo
 	String GetBrand()
 	{
 		return brand;
 	}
 	
+	// Toggles the stereos power on or off
 	void TogglePower()
 	{
 		isOn = !isOn;
