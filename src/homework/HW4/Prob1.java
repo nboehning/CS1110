@@ -31,9 +31,11 @@ public class Prob1
 
 class Rectangle
 {
+	// Variables
 	double width = 1.0;
 	double height = 1.0;
 	
+	// Constructors
 	Rectangle(){ }
 	
 	Rectangle(double newHeight, double newWidth)
@@ -42,6 +44,7 @@ class Rectangle
 		width = newWidth;
 	}
 	
+	// Methods
 	double GetArea()
 	{
 		return width*height;

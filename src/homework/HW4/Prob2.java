@@ -10,20 +10,24 @@ public class Prob2
 
 	public static void main(String[] args) 
 	{
+		// Set initial values
 		Account acct1 = new Account(1122, 20000);
 		acct1.SetAnnualInterestRate(4.5);
 		
+		// Display initial values
 		System.out.println("Initial Values");
 		System.out.println("Balance: " + acct1.GetBalance());
 		System.out.println("Date Created: " + acct1.GetDateCreated());
 		System.out.println("Monthly Interest: " + acct1.GetMonthlyInterest());
 		
+		// Withdraw and display values after withdrawal
 		acct1.Withdraw(2500);
 		System.out.println("After 2,500 Withdraw");
 		System.out.println("Balance: " + acct1.GetBalance());
 		System.out.println("Date Created: " + acct1.GetDateCreated());
 		System.out.println("Monthly Interest: " + acct1.GetMonthlyInterest());
 		
+		// Deposit and display values after deposit
 		acct1.Deposit(3000);
 		System.out.println("After 3,000 Deposit");
 		System.out.println("Balance: " + acct1.GetBalance());
@@ -36,11 +40,13 @@ public class Prob2
 
 class Account
 {
+	// Variables
 	int id = 0;
 	double balance = 0.0;
 	static double annualInterestRate = 0.0;
 	Date dateCreated;
 	
+	// Constructors
 	Account()
 	{
 		dateCreated = new Date();
@@ -53,6 +59,7 @@ class Account
 		dateCreated = new Date();
 	}
 	
+	// Getters and Setters
 	int GetId()
 	{
 		return id;
@@ -98,6 +105,8 @@ class Account
 		return balance * (GetMonthlyInterestRate() / 100);
 	}
 	
+	
+	// Methods
 	void Withdraw(double amt)
 	{
 		balance -= amt;
