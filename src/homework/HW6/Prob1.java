@@ -20,6 +20,7 @@ public class Prob1
 			accounts[i] = new Account(i, 100);
 		
 		// Start a scanner, initialize variables		
+		@SuppressWarnings("resource")
 		Scanner scanner =  new Scanner(System.in);
 		int curAccountNum = -1;
 		Account curAccount = new Account();		
