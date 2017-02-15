@@ -37,6 +37,8 @@ public class Prob2
 			System.out.println("The solution is: (" + equation.GetX() + ", " + equation.GetY() + ").");
 		else
 			System.out.println("The equation has no solution.");
+		
+		scanner.close();
 	}
 
 }
